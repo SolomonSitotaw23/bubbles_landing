@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Join the Beta</title>
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('_hw1zXb1TAyYJUDr3');
+        })();
+    </script>
+        <script type="text/javascript">
+          window.onload = function() {
+            let form_conf = document.getElementById("form_conf");
+            let beta_about = document.getElementById("beta_about");
+              document.getElementById('contact-form').addEventListener('submit', function(event) {
+                  event.preventDefault();
+                  // generate a five digit number for the contact_number variable
+
+                  // these IDs from the previous steps
+                  emailjs.sendForm('service_z1fqpfa', 'template_zwuafqa', this)
+                      .then(function() {
+                          console.log('SUCCESS!');
+                          form_conf.style.display = "block";
+                         beta_about.style.display = "none";
+                      }, function(error) {
+                          console.log('FAILED...', error);
+                      });
+              });
+          }
+      </script>  
+
+  </head>
+
+  <body class="bg-jazzberry-jam z-10">
+
+    <header class="sticky top-0 z-20">
+
+      <nav class="relative flex flex-wrap items-center justify-between w-full py-4 md:py-0 px-4 text-2xl bg-jet bubble-nav">
+        <div>
+          <a href="./index.html">
+            <img src="./images/bubbles-logo.png" class="mr-3 h-6 sm:h-9" alt="Bubbles Logo" />
+          </a>
+        </div>
+
+        <svg 
+          id="menu-button"
+          class="h-6 w-6 cursor-pointer md:hidden block modal-open"
+          fill="#CF6D38"
+          stroke="#CF6D38"
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg" 
+          viewBox="0 0 53.02 35.91">
+          <path class="cls-1" d="M3 21h47.07a3 3 0 0 0 0-6.08H3A3 3 0 0 0 3 21ZM11.52 6.08h30a3 3 0 0 0 2.94-3A3 3 0 0 0 41.5 0h-30a3 3 0 0 0-2.93 3 3 3 0 0 0 2.95 3.08ZM11.52 35.91h30a3 3 0 0 0 0-6.08h-30a3 3 0 0 0 0 6.08Z"/>
+        </svg>
+
+        <div class="hidden w-full md:flex md:items-center md:w-auto mr-4" id="menu">
+          <ul class="pt-4 px-8 text-platinum bubble-font-black-italic text-base lg:text-xl md:flex md:justify-between md:pt-0">
+            <li>
+              <a class="md:p-5 md:px-5 py-2 block hover:text-chocolate-web" href="./about.html">About Us</a>
+            </li>
+            <li>
+              <a class="md:p-5 md:px-5 py-2 block hover:text-chocolate-web" href="./creator.html"
+                >Become a Creator</a
+              >
+            </li>
+          </ul>
+
+          <div class="flex md:order-2">
+            <button 
+              onclick="window.location.href = 'beta.html';"
+              type="button"
+              class="text-jet bg-platinum hover:bg-chocolate-web hover:text-platinum bubble-font-black-italic text-base lg:text-xl px-5 py-2.5 text-center mr-3 md:mr-0 rounded-3xl">
+              Join the Beta
+            </button>
+          </div>
+
+        </div>
+      </nav style="margin-bottom: 25px;">
+    </header>
+
+    <section class="bubble-wave4 h-24 lg:h-36 bg-jet">
+ 
+    </section>
+    <section class="bubble-join-beta bg-jet h-full">
+        <div class="grid overflow-hidden grid-cols-12 lg:grid-rows-6">
+
+            <div class="invisible lg:visible row-start-1 row-end-3 col-start-3 col-span-1">
+              <img src="./images/Walk.png">
+            </div>
+
+            <div class="row-start-2 lg:row-start-2 row-end-7 col-start-2 lg:col-start-5 col-end-12 lg:col-end-9">
+                <h1 class="bubble-font-black-italic font-black text-platinum text-left text-3xl lg:text-7xl md:text-6xl lg:pb-20 lg:px-10 md:px-12">Join the Beta!</h1>
+                <p class="mt-4 bubble-font-regular font-normal text-platinum text-left text-base lg:text-2xl md:text-xl lg:px-10 md:px-12">We are launching soon! There are tons of features we <br> want to test, and we want your help to do it.</p>
+                <p class="mt-4 bubble-font-regular font-normal text-platinum text-left text-base lg:text-2xl md:text-xl pb-10 lg:px-10 md:px-12">Fill out this form and we will be in touch soon!</p>
+                <div class="w-full content-center lg:px-10 md:px-12">
+                  <form id="contact-form">
+                  <!---TODO: fix class selector and remove ids -->
+                    <div class="w-full  bubble-form content-center">
+                      <div class="px-4 w-full" id="bubble-form-first">
+                        <input type="text" placeholder="First name"
+                            class="my-3 w-full border-none bg-transparent outline-none placeholder:bubble-font-black" name="first_name"/>
+                      </div>
+                      <div class="px-4">
+                        <input type="text" placeholder="Last Name"
+                            class="my-3 w-full border-none bg-transparent outline-none placeholder:bubble-font-black" name="last_name"/>
+                      </div>
+                      <div class="px-4">
+                        <input type="text" placeholder="Email(example@bubbles.app)"
+                            class="my-3 w-full border-none bg-transparent outline-none " name="email"/>
+                      </div>
+                      <div class="px-4">
+                        <input type="text" placeholder="Mobile(ex.+30 3451267890)"
+                            class="my-3 w-full border-none bg-transparent outline-none " name="mobile"/>
+                      </div>
+                      <div id="bubble-form-last" class="px-4">
+                        <input type="text" placeholder="I am a student/creator/other"
+                            class="my-3 w-full border-none bg-transparent outline-none" name="am"/>
+                      </div class="m">
+                        <input
+                            class="mt-8 w-44 h-14 block px-4 mx-auto py-2 bubble-font-black text-white bg-jazzberry-jam rounded-full hover:bg-chocolate-web focus:outline-none focus:shadow-outline"
+                            type="submit" value="Submit"/>
+                        </form>
+                    </div>
+                    <div class="w-full">
+                      <p class="mb-2 mt-14 bubble-font-italic text-dim-gray text-xl lg:text-3xl text-center">want to learn more?</p>
+    
+                    </div>
+             
+                </div>
+      
+            </div>
+
+            <div class="static box invisible lg:visible row-start-5 row-end-12 col-start-10 col-end-12" style="margin-top:-200px"><img src="./images/Clubbers.png"></div>
+        </div>
+
+
+    
+    </section>
+
+
+    <div id="form_conf" class="w-full h-full bg-gray-900 bg-opacity-80 top-0 fixed sticky-0 hidden  z-80">
+      <div class="2xl:container  2xl:mx-auto py-48 px-4 md:px-28 flex justify-center items-center z-80">
+        <div class="w-72 md:w-96 relative flex flex-col justify-center items-center z-80 rounded-3xl" style="background-color: #C4C4C4">
+          <div role="banner" class=" mt-6">
+            <svg width="72" height="71" viewBox="0 0 72 71" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <rect x="0.439209" y="0.0322266" width="70.7807" height="70.7807" rx="35.3903" fill="url(#pattern0)"/>
+              <defs>
+              <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+              <use xlink:href="#image0_631_709" transform="translate(-0.0188679 -0.0188679) scale(0.00437863)"/>
+              </pattern>
+              <image id="image0_631_709" width="237" height="237" xlink:href="data:image/png;base64,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"/>
+              </defs>
+            </svg>  
+          </div>
+
+          <div class="mt-3 mx-auto">
+            <h1 class=" bubble-font-black-italic text-jet text-center md:text-left text-3xl md:text-3xl" >Thank you for bubbling!</h1>
+          </div>
+          
+          <div class="mt-5">
+            <p class="bubble-font-black-italic text-dim-gray text-l text-center">want to learn more ?</p>
+          </div>
+
+          <button onclick="window.location.href = 'about.html';"
+          class="mt-2 block w-30 lg:w-52 h-10 lg:h-16 px-4 mx-auto py-2 bubble-font-black-italic lg:text-2xl text-xl text-jet bg-white rounded-full hover:bg-deep-chestnut hover:text-platinum focus:outline-none focus:shadow-outline bubble-button z-20"
+          type="button">
+        About
+        </button>
+        <div class="">
+          <p class="mt-2 bubble-font-black-italic text-dim-gray text-l text-center">or</p>
+        </div>
+
+        <button onclick="window.location.href = 'index.html';" 
+        class="mt-2 mb-4 block w-30 lg:w-52 h-10 lg:h-16 px-4 mx-auto py-2 bubble-font-black-italic lg:text-2xl text-xl text-jet bg-white rounded-full hover:bg-deep-chestnut hover:text-platinum focus:outline-none focus:shadow-outline bubble-button z-20"
+        type="button">
+      Back to Main
+      </button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!--Modal-->
+<div class="modal opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center z-40">
+  <div class="modal-overlay absolute w-full h-full bg-chocolate-web opacity-100"></div>
+
+  <div class="modal-container fixed w-full h-full z-10 overflow-y-auto ">
+    
+	
+
+    <!-- Add margin if you want to see grey behind the modal-->
+    <div class="modal-content container mx-auto h-auto text-left">
+     
+	  <!--Title-->
+    <nav class="relative flex flex-wrap items-center justify-between w-full py-4 md:py-0 px-4 text-2xl bg-chocolate-web">
+      <div>
+        <a href="./index.html">
+          <img src="./images/bubbles-logo-white.png" class="mr-3 h-6 sm:h-9" alt="Bubbles Logo" />
+        </a>
+      </div>
+
+ 
+      <svg id="mobile-menu-exit"
+        class="h-6 w-6 cursor-pointer md:hidden block modal-close"
+        fill="#EAEAEA"
+        stroke="#EAEAEA"
+        data-name="Layer 1"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 31.68 31.68">
+        <title>Artboard 15</title>
+        <path class="cls-1" d="M23,15.81l7.2-7.2a5,5,0,1,0-7.13-7.13L15.81,8.67,8.61,1.48A5,5,0,1,0,1.48,8.61l7.19,7.26-7.19,7.2A5,5,0,0,0,8.61,30.2L15.87,23l7.2,7.2a5,5,0,0,0,3.56,1.48h0a5,5,0,0,0,3.57-8.61Z"/>
+      </svg>
+  
+
+      <div class="hidden w-full md:flex md:items-center md:w-auto mr-4" id="menu">
+
+      </div>
+  </nav style="margin-bottom: 25px;">
+
+      <!--Body-->
+      <div class="w-full mt-36">
+        <a class="bubble-font-black-italic text-white text-center text-3xl " href="./about.html" ><p>About Us</p></a>
+      </div>
+      <div class="w-full mt-10">
+        <a class="bubble-font-black-italic text-white text-center text-3xl" href="./creator.html" ><p>Become a Creator</p></a>
+      </div>
+      <div class="w-full bg-white opacity-100 mt-10 h-16 grid content-center">
+        <div class="w-full">
+          <a class="bubble-font-black-italic text-jet text-center text-3xl align-middle" href="./beta.html">
+            <p>Join the Beta</p>
+          </a>
+        </div>
+      </div>
+
+      <div class="w-full flex justify-center absolute bottom-0 ">
+        <a class="" href="https://discord.gg/d7wwRxGHy4">
+          <svg 
+              width="48" height="54" viewBox="0 0 48 54"
+              fill="none" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink">
+              <rect x="0.362793" width="47.0943" height="53.064" fill="url(#pattern08)"/>
+              <defs>
+              <pattern id="pattern08" patternContentUnits="objectBoundingBox" width="1" height="1">
+              <use xlink:href="#image0_1211_224" transform="scale(0.00469484 0.00416667)"/>
+              </pattern>
+              <image id="image0_1211_224" width="213" height="240" xlink:href="data:image/png;base64,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"/>
+              </defs>
+            </svg>
+        </a>
+
+        <a  class="ml-12" href="https://instagram.com/_bubbles.app?igshid=YmMyMTA2M2Y=">
+          <svg width="40" height="40" viewBox="0 0 40 40"
+            fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20.2205 3.75192C25.4511 3.75192 26.0651 3.77524 28.1325 3.86851C30.0444 3.954 31.0781 4.27266 31.7699 4.54468C32.687 4.9022 33.3398 5.32189 34.0238 6.00583C34.7077 6.68978 35.1352 7.34264 35.4849 8.25974C35.7492 8.95146 36.0756 9.98515 36.1611 11.8971C36.2544 13.9645 36.2777 14.5785 36.2777 19.8091C36.2777 25.0397 36.2544 25.6537 36.1611 27.7211C36.0756 29.633 35.7569 30.6667 35.4849 31.3584C35.1274 32.2755 34.7077 32.9284 34.0238 33.6124C33.3398 34.2963 32.687 34.7238 31.7699 35.0735C31.0781 35.3378 30.0444 35.6642 28.1325 35.7497C26.0651 35.8429 25.4511 35.8663 20.2205 35.8663C14.9899 35.8663 14.3759 35.8429 12.3085 35.7497C10.3966 35.6642 9.36288 35.3455 8.67116 35.0735C7.75405 34.716 7.1012 34.2963 6.41725 33.6124C5.73331 32.9284 5.30584 32.2755 4.9561 31.3584C4.69184 30.6667 4.36542 29.633 4.27992 27.7211C4.18666 25.6537 4.16334 25.0397 4.16334 19.8091C4.16334 14.5785 4.18666 13.9645 4.27992 11.8971C4.36542 9.98515 4.68407 8.95146 4.9561 8.25974C5.31361 7.34264 5.73331 6.68978 6.41725 6.00583C7.1012 5.32189 7.75405 4.89442 8.67116 4.54468C9.36288 4.28043 10.3966 3.954 12.3085 3.86851C14.3759 3.76747 14.9977 3.75192 20.2205 3.75192ZM20.2205 0.223389C14.9044 0.223389 14.236 0.246705 12.1453 0.33997C10.0624 0.433235 8.64007 0.767436 7.39654 1.24931C6.10637 1.74672 5.01827 2.42289 3.93018 3.51099C2.84208 4.59908 2.17368 5.69495 1.6685 6.97735C1.18663 8.22088 0.852425 9.64318 0.75916 11.7339C0.665894 13.8168 0.642578 14.4852 0.642578 19.8013C0.642578 25.1174 0.665894 25.7858 0.75916 27.8765C0.852425 29.9595 1.18663 31.3818 1.6685 32.6331C2.16591 33.9232 2.84208 35.0113 3.93018 36.0994C5.01827 37.1875 6.11414 37.8559 7.39654 38.3611C8.64007 38.843 10.0624 39.1772 12.1531 39.2704C14.2438 39.3637 14.9044 39.387 20.2283 39.387C25.5522 39.387 26.2128 39.3637 28.3035 39.2704C30.3864 39.1772 31.8087 38.843 33.06 38.3611C34.3502 37.8637 35.4383 37.1875 36.5264 36.0994C37.6145 35.0113 38.2829 33.9155 38.7881 32.6331C39.2699 31.3895 39.6041 29.9672 39.6974 27.8765C39.7907 25.7858 39.814 25.1252 39.814 19.8013C39.814 14.4774 39.7907 13.8168 39.6974 11.7261C39.6041 9.64318 39.2699 8.22088 38.7881 6.96958C38.2906 5.67941 37.6145 4.59131 36.5264 3.50322C35.4383 2.41512 34.3424 1.74672 33.06 1.24153C31.8165 0.759664 30.3942 0.425463 28.3035 0.332198C26.205 0.246705 25.5366 0.223389 20.2205 0.223389Z" fill="#EAEAEA"/>
+            <path d="M20.2207 9.75183C14.6714 9.75183 10.1636 14.2519 10.1636 19.8089C10.1636 25.366 14.6636 29.866 20.2207 29.866C25.7777 29.866 30.2778 25.366 30.2778 19.8089C30.2778 14.2519 25.7777 9.75183 20.2207 9.75183ZM20.2207 26.3297C16.6144 26.3297 13.6921 23.4074 13.6921 19.8012C13.6921 16.1949 16.6144 13.2726 20.2207 13.2726C23.8269 13.2726 26.7492 16.1949 26.7492 19.8012C26.7492 23.4074 23.8269 26.3297 20.2207 26.3297Z" fill="#EAEAEA"/>
+            <path d="M30.6738 11.6948C31.9701 11.6948 33.021 10.644 33.021 9.34766C33.021 8.05136 31.9701 7.00049 30.6738 7.00049C29.3775 7.00049 28.3267 8.05136 28.3267 9.34766C28.3267 10.644 29.3775 11.6948 30.6738 11.6948Z" fill="#EAEAEA"/>
+          </svg>
+        </a>
+        
+        <a  class="ml-12" href="https://www.facebook.com/Bubbles.page/">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_1214_231)">
+            <path d="M40 20.4961C40 9.65979 31.0469 0.877319 20 0.877319C8.95312 0.877319 0 9.65979 0 20.4961C0 30.2902 7.3125 38.4059 16.875 39.8773V26.1672H11.7969V20.4961H16.875V16.1738C16.875 11.2577 19.8594 8.54091 24.4297 8.54091C26.6172 8.54091 28.9062 8.92409 28.9062 8.92409V13.7521H26.3828C23.8984 13.7521 23.125 15.2657 23.125 16.8176V20.4961H28.6719L27.7852 26.1672H23.125V39.8773C32.6875 38.4059 40 30.2902 40 20.4961Z" fill="#EAEAEA"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_1214_231">
+            <rect width="40" height="39" fill="white" transform="translate(0 0.877319)"/>
+            </clipPath>
+            </defs>
+            </svg>            
+        </a>
+      </div>
+      <!--Footer-->
+   
+
+    </div>
+  </div>
+</div>
+
+<script>
+  var openmodal = document.querySelectorAll('.modal-open')
+  for (var i = 0; i < openmodal.length; i++) {
+    openmodal[i].addEventListener('click', function(event){
+  	event.preventDefault()
+  	toggleModal()
+    })
+  }
+  
+  const overlay = document.querySelector('.modal-overlay')
+  overlay.addEventListener('click', toggleModal)
+  
+  var closemodal = document.querySelectorAll('.modal-close')
+  for (var i = 0; i < closemodal.length; i++) {
+    closemodal[i].addEventListener('click', toggleModal)
+  }
+  
+  document.onkeydown = function(evt) {
+    evt = evt || window.event
+    var isEscape = false
+    if ("key" in evt) {
+  	isEscape = (evt.key === "Escape" || evt.key === "Esc")
+    } else {
+  	isEscape = (evt.keyCode === 27)
+    }
+    if (isEscape && document.body.classList.contains('modal-active')) {
+  	toggleModal()
+    }
+  };
+  
+  
+  function toggleModal () {
+    const body = document.querySelector('body')
+    const modal = document.querySelector('.modal')
+    modal.classList.toggle('opacity-0')
+    modal.classList.toggle('pointer-events-none')
+    body.classList.toggle('modal-active')
+  }
+  
+   
+</script>
+<footer>
+  <div class="h-32 lg:h-36  bubble-ribbon-bottom bg-jet">
+   
+   
+      <button onclick="window.location.href = 'about.html';" id="beta_about"
+      class="block w-30 lg:w-52 h-12 lg:h-16 px-4 mx-auto py-2 bubble-font-black-italic lg:text-2xl text-xl text-jet bg-white rounded-full hover:bg-deep-chestnut hover:text-platinum focus:outline-none focus:shadow-outline border-4 border-jet bubble-button"
+      type="button">
+    About
+    </button>
+  </div>
+  <div class="bg-jazzberry-jam">
+    <div class="w-full flex justify-center">
+      <a class="" href="https://discord.gg/d7wwRxGHy4">
+        <svg 
+            class="h-16"
+            width="40" height="54" viewBox="0 0 48 54"
+            fill="none" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink">
+            <rect x="0.362793" width="47.0943" height="53.064" fill="url(#pattern03)"/>
+            <defs>
+            <pattern id="pattern03" patternContentUnits="objectBoundingBox" width="1" height="1">
+            <use xlink:href="#image0_1211_224" transform="scale(0.00469484 0.00416667)"/>
+            </pattern>
+            <image id="image0_1211_224" width="213" height="240" xlink:href="data:image/png;base64,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"/>
+            </defs>
+          </svg>
+      </a>
+
+      <div class="ml-2 lg:grid content-center hidden">
+        <div class="">
+          <a class="bubble-font-regular text-white" href="https://discord.gg/d7wwRxGHy4">
+            Join us on Discord
+          </a>
+        </div>
+      </div>
+
+            
+      <a  class="ml-12" href="https://instagram.com/_bubbles.app?igshid=YmMyMTA2M2Y=">
+        <svg
+        class="h-16"
+         width="40" height="40" viewBox="0 0 40 40"
+          fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20.2205 3.75192C25.4511 3.75192 26.0651 3.77524 28.1325 3.86851C30.0444 3.954 31.0781 4.27266 31.7699 4.54468C32.687 4.9022 33.3398 5.32189 34.0238 6.00583C34.7077 6.68978 35.1352 7.34264 35.4849 8.25974C35.7492 8.95146 36.0756 9.98515 36.1611 11.8971C36.2544 13.9645 36.2777 14.5785 36.2777 19.8091C36.2777 25.0397 36.2544 25.6537 36.1611 27.7211C36.0756 29.633 35.7569 30.6667 35.4849 31.3584C35.1274 32.2755 34.7077 32.9284 34.0238 33.6124C33.3398 34.2963 32.687 34.7238 31.7699 35.0735C31.0781 35.3378 30.0444 35.6642 28.1325 35.7497C26.0651 35.8429 25.4511 35.8663 20.2205 35.8663C14.9899 35.8663 14.3759 35.8429 12.3085 35.7497C10.3966 35.6642 9.36288 35.3455 8.67116 35.0735C7.75405 34.716 7.1012 34.2963 6.41725 33.6124C5.73331 32.9284 5.30584 32.2755 4.9561 31.3584C4.69184 30.6667 4.36542 29.633 4.27992 27.7211C4.18666 25.6537 4.16334 25.0397 4.16334 19.8091C4.16334 14.5785 4.18666 13.9645 4.27992 11.8971C4.36542 9.98515 4.68407 8.95146 4.9561 8.25974C5.31361 7.34264 5.73331 6.68978 6.41725 6.00583C7.1012 5.32189 7.75405 4.89442 8.67116 4.54468C9.36288 4.28043 10.3966 3.954 12.3085 3.86851C14.3759 3.76747 14.9977 3.75192 20.2205 3.75192ZM20.2205 0.223389C14.9044 0.223389 14.236 0.246705 12.1453 0.33997C10.0624 0.433235 8.64007 0.767436 7.39654 1.24931C6.10637 1.74672 5.01827 2.42289 3.93018 3.51099C2.84208 4.59908 2.17368 5.69495 1.6685 6.97735C1.18663 8.22088 0.852425 9.64318 0.75916 11.7339C0.665894 13.8168 0.642578 14.4852 0.642578 19.8013C0.642578 25.1174 0.665894 25.7858 0.75916 27.8765C0.852425 29.9595 1.18663 31.3818 1.6685 32.6331C2.16591 33.9232 2.84208 35.0113 3.93018 36.0994C5.01827 37.1875 6.11414 37.8559 7.39654 38.3611C8.64007 38.843 10.0624 39.1772 12.1531 39.2704C14.2438 39.3637 14.9044 39.387 20.2283 39.387C25.5522 39.387 26.2128 39.3637 28.3035 39.2704C30.3864 39.1772 31.8087 38.843 33.06 38.3611C34.3502 37.8637 35.4383 37.1875 36.5264 36.0994C37.6145 35.0113 38.2829 33.9155 38.7881 32.6331C39.2699 31.3895 39.6041 29.9672 39.6974 27.8765C39.7907 25.7858 39.814 25.1252 39.814 19.8013C39.814 14.4774 39.7907 13.8168 39.6974 11.7261C39.6041 9.64318 39.2699 8.22088 38.7881 6.96958C38.2906 5.67941 37.6145 4.59131 36.5264 3.50322C35.4383 2.41512 34.3424 1.74672 33.06 1.24153C31.8165 0.759664 30.3942 0.425463 28.3035 0.332198C26.205 0.246705 25.5366 0.223389 20.2205 0.223389Z" fill="#EAEAEA"/>
+          <path d="M20.2207 9.75183C14.6714 9.75183 10.1636 14.2519 10.1636 19.8089C10.1636 25.366 14.6636 29.866 20.2207 29.866C25.7777 29.866 30.2778 25.366 30.2778 19.8089C30.2778 14.2519 25.7777 9.75183 20.2207 9.75183ZM20.2207 26.3297C16.6144 26.3297 13.6921 23.4074 13.6921 19.8012C13.6921 16.1949 16.6144 13.2726 20.2207 13.2726C23.8269 13.2726 26.7492 16.1949 26.7492 19.8012C26.7492 23.4074 23.8269 26.3297 20.2207 26.3297Z" fill="#EAEAEA"/>
+          <path d="M30.6738 11.6948C31.9701 11.6948 33.021 10.644 33.021 9.34766C33.021 8.05136 31.9701 7.00049 30.6738 7.00049C29.3775 7.00049 28.3267 8.05136 28.3267 9.34766C28.3267 10.644 29.3775 11.6948 30.6738 11.6948Z" fill="#EAEAEA"/>
+        </svg>
+      </a>
+
+      <div class="ml-2 lg:grid content-center hidden">
+        <div class="">
+          <a class="bubble-font-regular text-white" href="https://instagram.com/_bubbles.app?igshid=YmMyMTA2M2Y=">
+            Follow us on Instagram
+          </a>
+        </div>
+      </div>
+      
+      <a  class="ml-12" href="https://www.facebook.com/Bubbles.page/">
+        <svg
+        class="h-16"
+         width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_1214_231)">
+          <path d="M40 20.4961C40 9.65979 31.0469 0.877319 20 0.877319C8.95312 0.877319 0 9.65979 0 20.4961C0 30.2902 7.3125 38.4059 16.875 39.8773V26.1672H11.7969V20.4961H16.875V16.1738C16.875 11.2577 19.8594 8.54091 24.4297 8.54091C26.6172 8.54091 28.9062 8.92409 28.9062 8.92409V13.7521H26.3828C23.8984 13.7521 23.125 15.2657 23.125 16.8176V20.4961H28.6719L27.7852 26.1672H23.125V39.8773C32.6875 38.4059 40 30.2902 40 20.4961Z" fill="#EAEAEA"/>
+          </g>
+          <defs>
+          <clipPath id="clip0_1214_231">
+          <rect width="40" height="39" fill="white" transform="translate(0 0.877319)"/>
+          </clipPath>
+          </defs>
+          </svg>            
+      </a>
+      
+      <div class="ml-2 lg:grid content-center hidden">
+        <div class="">
+          <a class="bubble-font-regular text-white" href="https://www.facebook.com/Bubbles.page/">
+            Like us on Facebook
+          </a>
+        </div>
+      </div>
+
+
+
+    </div>
+
+    <div class="w-full flex justify-center ">
+  
+      <p class="bubble-font-regular text-white">Terms of Use</p>
+
+      <p class="ml-2 lg:ml-6 bubble-font-regular text-white">-</p>
+      <p class="ml-2 lg:ml-6 bubble-font-regular text-white">Privacy Policy</p>
+      <p class="ml-2 lg:ml-6 bubble-font-regular text-white">-</p>
+      <p class="ml-2 lg:ml-6 bubble-font-regular text-white">Cookie Policy</p>
+    </div>
+
+    <div class="w-full flex justify-center mt-1">
+      <p class="inline-block lg:block bubble-font-regular text-xs text-white opacity-50">Copyright © 2022 - bubbles.app &nbsp;</p>
+      <p class="inline-block lg:block bubble-font-regular text-xs text-white opacity-50"> All rights reserved</p>
+    </div>
+
+    <div class="h-4 lg:h-10"></div>
+
+  </div>
+
+</footer>
+
+    
+</body>
+</html>

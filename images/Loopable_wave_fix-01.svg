@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.4.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Wave" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 133 74" style="enable-background:new 0 0 133 74;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#D06E38;}
+	.st1{fill:#BA4A4D;}
+	.st2{fill:#AA3065;}
+	.st3{fill:#932758;}
+</style>
+<g id="Wave_group">
+	<path id="orange" class="st0" d="M66.6,0C33.3,0,33.3,12,0,12v15.4c33.3,0,33.3-12,66.6-12c33.2,0,33.3,11.9,66.4,12V12
+		C99.9,11.9,99.8,0,66.6,0z"/>
+	<path id="red" class="st1" d="M0,27.4v0.3v15.1c33.3,0,33.3-12,66.6-12c33.2,0,33.3,11.9,66.4,12V27.6v-0.2
+		c-33.1,0-33.2-12-66.4-12C33.3,15.4,33.3,27.4,0,27.4z"/>
+	<path id="pink" class="st2" d="M0,42.8v0.3v15.1c33.3,0,33.3-12,66.6-12c33.2,0,33.3,11.9,66.4,12V43.1v-0.2
+		c-33.1,0-33.2-12-66.4-12C33.3,30.9,33.3,42.8,0,42.8z"/>
+	<path id="dark_pink" class="st3" d="M0,58.2v0.3V74c33.1,0,33.2-12,66.4-12c33.3,0,33.3,12,66.6,12l0-0.1V58.5v-0.2
+		c-33.1,0-33.2-12-66.4-12C33.3,46.3,33.3,58.2,0,58.2z"/>
+</g>
+</svg>

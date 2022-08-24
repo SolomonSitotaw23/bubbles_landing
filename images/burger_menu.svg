@@ -1,0 +1,16 @@
+<svg id="Layer_1"
+ data-name="Layer 1"
+  xmlns="http://www.w3.org/2000/svg"
+   viewBox="0 0 53.02 35.91">
+   <defs>
+   <style>.cls-1{fill:#606060;}</style>
+   </defs>
+   <title>Artboard 11</title>
+   <path class="cls-1" d="M3,21H50.07a3,3,0,0,0,0-6.08H3A3,3,0,0,0,3,21Z"/>
+   <path class="cls-1" d="M11.52,6.08h30a3,3,0,0,0,2.94-3A3,3,0,0,0,41.5,0h-30A3,3,0,0,0,8.57,3,3,3,0,0,0,11.52,6.08Z"/>
+   <path class="cls-1" d="M11.52,35.91h30a3,3,0,0,0,0-6.08h-30a3,3,0,0,0,0,6.08Z"/>
+   </svg>
+
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 53.02 35.91">
+  <path class="cls-1" d="M3 21h47.07a3 3 0 0 0 0-6.08H3A3 3 0 0 0 3 21ZM11.52 6.08h30a3 3 0 0 0 2.94-3A3 3 0 0 0 41.5 0h-30a3 3 0 0 0-2.93 3 3 3 0 0 0 2.95 3.08ZM11.52 35.91h30a3 3 0 0 0 0-6.08h-30a3 3 0 0 0 0 6.08Z"/>
+</svg>
